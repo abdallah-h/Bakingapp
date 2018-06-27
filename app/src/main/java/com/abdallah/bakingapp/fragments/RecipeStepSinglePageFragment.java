@@ -278,6 +278,7 @@ public class RecipeStepSinglePageFragment extends Fragment implements ExoPlayer.
     private void releasePlayer() {
         if (player != null) {
             playBackPosition = player.getCurrentPosition();
+            playWhenReady = player.getPlayWhenReady();
             player.stop();
             player.release();
             player = null;
